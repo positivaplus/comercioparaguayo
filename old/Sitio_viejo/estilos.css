@@ -1,0 +1,86 @@
+/* Reset */
+img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/*links, botones mouse-over*/
+.link_mail a:link {font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#006699;}
+.link_mail a:hover {text-decoration:underline;}
+.link_mail a:visited {font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#006699;}
+
+.link_contenido a:link {font-family:Tahoma; font-size:11px; color:#006699;}
+.link_contenido a:hover {text-decoration:underline;}
+.link_contenido a:visited {font-family:Tahoma; font-size:11px; color:#006699;}
+
+a.btn_denunciar_siniestros {display:block; width:135px; height:25px; background-image:url(images/btn_denunciar_siniestros.png); background-repeat:no-repeat;}
+a.btn_denunciar_siniestros:hover {background-position: -135px 0;}
+
+
+/* CSS Document */
+.titulos {
+	font-family:Tahoma;
+	font-size:20px;
+	font-weight:bold;
+	color:#006699;
+}
+
+.titulos_novedades {
+	font-family:Tahoma;
+	font-size:12px;
+	color:#666666;
+}
+
+.subtitulos {
+	font-family:Tahoma;
+	font-size:13px;
+	font-weight:bold;
+	color:#006699;
+}
+
+.separador {
+	background-image:url(images/img_separador_novedades.png);
+	background-repeat:repeat-x;
+	background-position:left top
+}
+
+.contenido {
+	font-family:Tahoma;
+	font-size:13px;
+	color:#888888;
+}
+
+.contenido_novedades {
+	font-family:Tahoma;
+	font-size:11px;
+	color:#777777;
+}
+
+.datos_pie {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#777777;
+}
+
+/*para el formulario*/
+.campo_obligatorio {
+	font-family:Tahoma;
+	font-size:13px;
+	color:#FF0000;
+}
+
+.mensaje_de_error {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	color:#FF0000;
+}
+
+/*Imagen Bancard*/
+#imagen_bancard{
+	margin:20px auto;
+	text-align:center;	
+}

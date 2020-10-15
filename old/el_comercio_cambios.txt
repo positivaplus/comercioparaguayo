@@ -1,0 +1,14 @@
+- en reaseguradores debe ir solo EVERES
+- agregar http://www.scor.com/ logo, descripcion
+
+- form de siniestros agregar, y colocarle opcion de adjunto, que se guarde en una base de daos al enviar 
+y que tenga un loc para saber de que ip publica se envio.form http://www.elcomercioparaguayo.com.py/denuncia_por_siniestro.php
+
+- polisas:  condiciones de polisas, arriba de novedades.. solo dentro de polisas
+
+solicitud de seguros debe ir en polisas
+
+chapa municipal tiene que ser chapa nomas
+
+sacar localidad
+

@@ -1,0 +1,1904 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+.animation-only-desktop-hidding{
+  opacity: 0;
+}
+.clickeable{
+  cursor: pointer;
+}
+.bold{
+  font-weight: bold !important;
+}
+.lighter{
+  font-weight: lighter !important;
+}
+a:hover{
+  text-decoration: none;
+}
+#home, #page-nosotros, #page-polizas, #page-siniestros, #page-agencias, #page-contacto{
+
+}
+.max-width-reached{
+  position: relative;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*TOOLBAR*/
+.toolbar{
+  height: 100pt;
+  background-color: #00468E;
+  box-shadow: 0px 1px 10px black;
+  position: relative;
+  z-index: 999;
+}
+.inner-toolbar{
+  height: 100%;
+}
+.inner-toolbar-child{
+  height: 100%;
+}
+.toolbar-child-row{
+  height: 33%;
+}
+.logo-toolbar{
+  width: 75%;
+  height: 100px;
+  margin-top: 12pt;
+  margin-bottom: 12pt;
+  margin-left: 30pt;
+  background-image: url('../img/logo/logo-desktop.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+.other-services{
+  float: right;
+  margin-right:0;
+  width: 130pt;
+  height: 100%;
+  text-align: center;
+}
+.other-services p{
+  display: inline-block;
+  margin-top: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  color: #fff;
+  font-size: 12px;
+  font-weight: lighter;
+}
+.opt-div{
+  display: inline-block;
+  height: 100%;
+  float: right;
+  margin-right: 10pt;
+}
+.opt-div .opt{
+  display: inline-block;
+  margin-top: 5pt;
+  color: #fff;
+  font-weight:lighter;
+  font-size: 14px;
+  padding: 5pt;
+}
+.opt-div .opt:hover{
+  background-color: rgba(255,255,255,0.2);
+}
+.arrow-container{
+  display: inline-block;
+  margin-left: 3px;
+  margin-bottom: 3px;
+}
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+}
+.opt-expanded div{
+  color: #fff;
+  font-weight:lighter;
+  font-size: 14px;
+  padding: 5pt;
+}
+.opt-expanded div:hover{
+  background-color: rgba(255,255,255,0.2);
+}
+.srch-div{
+  background-color: rgba(255,255,255,0.4);
+  /*display: inline-block;*/
+  display: none;
+  float: right;
+  height: 100%;
+  width: 6%;
+  border-radius: 5px;
+  background-image: url('../img/icon/search-white.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 25px;
+}
+.opt-expanded{
+  position: absolute;
+  left: auto;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 13px;
+  text-align: left;
+  background-color: #00468E;
+  border: 1px solid transparent;
+  border-radius: 0;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  background-clip: padding-box;
+  margin-top: 4pt;
+  margin-left: -6pt;
+}
+.opt:nth-child(3):hover .opt-expanded{
+  display: block;
+}
+/*END TOOLBAR*/
+/*mobile menu*/
+.mobile-logo-toolbar{
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 100px;
+  width: 100px;
+  height: 90%;
+  background-image: url('../img/logo/logo-desktop.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.navTrigger {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  margin: auto;
+  position: absolute;
+  left: 10;
+  top: 0;
+  bottom: 0;
+}
+.navTrigger i {
+  background-color: #fff;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+}
+.navTrigger i:nth-child(1) {
+  -webkit-animation: outT 0.8s backwards;
+  animation: outT 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+.navTrigger i:nth-child(2) {
+  margin: 5px 0;
+  -webkit-animation: outM 0.8s backwards;
+  animation: outM 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+.navTrigger i:nth-child(3) {
+  -webkit-animation: outBtm 0.8s backwards;
+  animation: outBtm 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+.navTrigger.active i:nth-child(1) {
+  -webkit-animation: inT 0.8s forwards;
+  animation: inT 0.8s forwards;
+}
+.navTrigger.active i:nth-child(2) {
+  -webkit-animation: inM 0.8s forwards;
+  animation: inM 0.8s forwards;
+}
+.navTrigger.active i:nth-child(3) {
+  -webkit-animation: inBtm 0.8s forwards;
+  animation: inBtm 0.8s forwards;
+}
+@-webkit-keyframes inM {
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+@keyframes inM {
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@-webkit-keyframes outM {
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+@keyframes outM {
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@-webkit-keyframes inT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+@keyframes inT {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
+}
+@-webkit-keyframes outT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+@keyframes outT {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
+}
+@-webkit-keyframes inBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+@keyframes inBtm {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
+}
+@-webkit-keyframes outBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+@keyframes outBtm {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
+}
+.mobile-menu-container{
+  display: none;
+  z-index: 1000;
+  position: absolute;
+  color: #fff;
+  font-weight:lighter;
+  font-size: 17px;
+}
+.mobile-menu-container.visible{
+  display: block !important;
+}
+.mobile-menu-container a .pair{
+  background-color: #00468E;
+  color: #fff;
+}
+.mobile-menu-container a .unpair{
+  background-color: #003f7f;
+  color: #fff;
+}
+.mobile-menu-opt{
+  padding: 10pt;
+  width: 200pt;
+}
+/*end mobile menu*/
+/*CAROUSEL*/
+#home-carousel{
+  width: 100%;
+  z-index: 998 !important;
+  position: relative;
+}
+#home-carousel .item img{
+   width: 100%;
+   max-height: 500pt;
+}
+#home-carousel .owl-controls{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.item-child{
+  width: 400pt;
+  position: absolute;
+  top:60%;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.item-child p{
+  margin: 10px;
+  font-size: 5rem;
+  color: #fff;
+  font-weight: bolder;
+  line-height: 50px;
+}
+/*END CAROUSEL*/
+/*SOMOS*/
+.somos-container{
+  height: 350pt;
+}
+.somos-container-2{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 500pt;
+  padding-top: 30pt;
+  margin-bottom: 100pt;
+}
+#page-siniestros .somos-container-2{
+  min-height: 250pt;
+}
+.less-margin{
+  height: 250pt;
+  margin-bottom: 10pt;
+}
+.less-margin-2{
+  /*height: 350pt;*/
+  margin-bottom: 10pt;
+}
+.somos-container-long{
+  width: 100%;
+  height: 1000pt;
+}
+.somos-text{
+  position: absolute;
+  float: left;
+  margin-left: 60pt;
+  margin-top: 30pt;
+}
+.somos-text-2{
+  float: left;
+  width: 600pt;
+  margin-left: 60pt;
+  margin-top: 30pt;
+}
+.somos-text h2, .somos-text-2 h2{
+  color: #00468E;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.somos-text h2{
+  margin-top: 0;
+  color: #00468E;
+  font-weight: bold;
+  padding-top: 10pt;
+}
+.somos-text .lighter{
+  font-size: 27px;
+}
+.somos-container-2 h3{
+  color: #00468E;
+}
+.somos-text .text-1{
+  font-size: 17px;
+  width: 400pt;
+  margin-top: 30pt;
+  font-weight: lighter;
+}
+.text-1{
+  font-size: 17px !important;
+  font-weight: lighter !important;
+}
+.somos-text .text-2{
+  font-size: 17px;
+  width: 550pt;
+  margin-top: 30pt;
+  font-weight: lighter;
+}
+.somos-text-2 .text-2{
+  font-size: 17px;
+  width: 550pt;
+  margin-top: 10pt;
+  font-weight: lighter;
+}
+.somos-btn{
+  margin-top: 20px;
+  height: 25pt;
+  width: 80pt;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: lighter;
+  background-color: #00468E;
+  color: #fff;
+  border: 0;
+}
+.somos-img{
+  width: 50%;
+  height: 70%;
+  background-image: url('../img/logo/logo-azul-home-comercio.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 0;
+}
+.somos-container-long .somos-img{
+  margin-top: 150pt;
+  margin-right: 50pt;
+  background-size: 230pt 70pt;
+  width: 230pt;
+  height: 70pt;
+}
+.cont-long-siniestros .somos-img{
+  margin-top: 160pt;
+  margin-right: 50pt;
+  background-size: 230pt 70pt;
+  width: 230pt;
+  height: 70pt;
+}
+.full-width-img{
+  width: 100%;
+  height: 250pt;
+  background-image: url('../img/portada/rsz_portada-full-width.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.vision{
+
+}
+
+
+.somos-content{
+  position: absolute;
+  float: left;
+  margin-left: 60pt;
+  margin-top: 30pt;
+}
+.somos-title-home{
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #00468E;
+  padding-top: 10pt;
+}
+.somos-text-home{
+  font-size: 17px;
+  width: 400pt;
+  margin-top: 30pt;
+  font-weight: lighter;
+}
+.nosotros-container{
+/*width: 100vw;*/
+  height: 950pt;
+  position: relative;
+}
+.nosotros-valores{
+  height: 700pt;
+}
+.nosotros-container .somos-img{
+  margin-top: 150pt;
+  margin-right: 50pt;
+  background-size: 230pt 70pt;
+  width: 230pt;
+  height: 70pt;
+}
+
+
+/*END SOMOS*/
+/*COBERTURAS*/
+.coberturas-container{
+  height: 450pt;
+  background-color: #bddbed;
+  position: relative;
+}
+.coberturas-title-container{
+  text-align: center;
+  /*width: 100vw;*/
+}
+.coberturas-title{
+  margin-top: -13pt;
+  /*position: absolute;*/
+}
+.coberturas-title h2{
+  display: inline;
+    width: 350pt;
+  color: #fff;
+  background-color: #00468E;
+  padding-left: 15pt;
+  padding-right: 15pt;
+  padding-top: 10pt;
+  padding-bottom: 10pt;
+}
+.coberturas-carousel-container{
+  padding-top: 70pt;
+}
+#coberturas-carousel .item .coberturas-card{
+  height: 300pt;
+  margin-left: 10pt;
+  margin-right: 10pt;
+}
+.blue{
+  background-color: #6AB2E2;
+}
+.light-blue{
+  background-color: #E5F4FA;
+}
+.red{
+  background-color: #D7575B;
+}
+.light-red{
+  background-color: #CD7E9D;
+}
+.yellow{
+  background-color: #FF931E;
+}
+.light-yellow{
+  background-color: #EEB861;
+}
+.card-title{
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 24px;
+  padding-top: 5pt;
+  padding-bottom: 5pt;
+}
+
+#coberturas-carousel.item{
+  border-radius: 25%;
+
+}
+.card-content{
+  height: 85%;
+  width: 99%;
+  margin-left: 3pt;
+  border-radius: 0 0 3% 3%;
+}
+.card-content .col-md-4, .card-content .col-md-8{
+  position: relative;
+  height: 87%;
+}
+.card-img{
+  margin-top: 30pt;
+  margin-left: 35pt;
+  height: 150pt;
+  width: 150pt;
+  border-radius: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.img-poliza-particular{
+  background-image: url('../img/portada/polizas-particular.png');
+
+}
+.img-poliza-familiar{
+  background-image: url('../img/portada/polizas-familiar.png');
+}
+.img-poliza-empresas{
+  background-image: url('../img/portada/polizas-empresas.png');
+}
+.card-text p{
+  margin-top: 20pt;
+  margin-right: 40pt;
+  margin-left: 30pt;
+  font-size: 17px;
+  font-weight: 400;
+}
+.cobertura-btn{
+  height: 25pt;
+  width: 100pt;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: lighter;
+  color: #fff;
+  border: 0;
+  margin-left: 30pt;
+}
+.owl-custom{
+  background-color: #bddbed;
+  width: 100%;
+  height: 300pt;
+}
+.line-arrow {
+    position: absolute;
+    font-size: 15px;
+    width: 4em;
+	  height: 4em;
+    margin-top: -2em;
+    top: 50%;
+}
+
+.line-arrow.left {
+    border-top: 3px solid #fff;
+	  border-left: 3px solid #fff;
+    transform: rotate(-54deg) skew(-20deg);
+    left: 40pt;
+}
+
+.line-arrow.right {
+  	border-top: 3px solid #fff;
+	  border-right: 3px solid #fff;
+    transform: rotate(54deg) skew(20deg);
+    right: 40pt;
+}
+
+.line-arrow:active,
+.line-arrow.active {
+    border-width: 5px;
+}
+#coberturas-carousel .owl-dots{
+  margin-top: 5% !important;
+}
+#coberturas-carousel .owl-dot span {
+  width: 50pt !important;
+  height: 5pt !important;
+  border-radius: 0 !important;
+}
+#coberturas-carousel .owl-dot:nth-child(1) span{
+  background: #6AB2E2 !important; /*blue*/
+}
+#coberturas-carousel .owl-dot:nth-child(3) span{
+  background: #D7575B !important; /*red*/
+}
+#coberturas-carousel .owl-dot:nth-child(2) span{
+  background: #FF931E !important; /*yellow*/
+}
+.polizas h2{
+  margin-left: -20pt;
+  margin-top: 15pt;
+}
+.polizas-footer{
+  height: 300pt !important;
+}
+/*END COBERTURAS*/
+/*POLIZA*/
+.poliza-container{
+  width: 100%;
+  color: #00468E;
+  background-color: #f2f2f2;
+  display: inline-block;
+  padding-top: 40pt;
+  padding-bottom: 50pt;
+
+}
+.poliza-container-2{
+  width: 100%;
+  min-height: 100pt;
+  color: #00468E;
+}
+.poliza-container h2{
+  font-size: 30px;
+  font-weight: bold;
+  /*margin-top: 40pt;*/
+}
+.poliza-container h1{
+  font-size: 48px;
+  font-weight: 800;
+  display: inline-block;
+}
+.poliza-container .row{
+  position: relative;
+}
+.home-poliza-number {
+}
+.poliza-container .phone-call{
+  width: 50pt;
+  height: 50pt;
+  margin-bottom: 15pt;
+  margin-right: 10pt;
+  display: inline-block;
+}
+.poliza-btn{
+  color: #fff;
+  height: 100%;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: lighter;
+  border: 0;
+  padding-top: 2pt;
+  padding-bottom: 2pt;
+  padding-left: 15pt;
+  padding-right: 15pt;
+}
+.poliza-btn-row{
+  padding-top: 30pt;
+}
+.less-margin-top{
+  margin-top: 10pt !important;
+}
+.siniestro-form-btn{
+  background-color: #FF931E;
+}
+.verde-form-btn{
+  background-color: #8CC63F;
+}
+.siniestros-respaldo{
+  /*height: 150pt;*/
+  width: 300pt;
+}
+.siniestros-respaldo .col-xs-6{
+  height: 100%;
+  background-color: blue;
+}
+.modal-dialog{
+  width: 90%;
+}
+.modal-content{
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 1);
+}
+.modal-backdrop.in{
+  opacity: .1;
+}
+.modal-header{
+  border-bottom: 0;
+}
+.modal-header h2{
+  font-size: 38px;
+  font-weight: bold;
+  margin-left: 20pt;
+  margin-top: 10pt;
+}
+.modal-body h3{
+  font-size: 32px;
+  font-weight: bold;
+  margin-left: 20pt;
+  margin-top: 25pt;
+}
+.modal{
+  color: #00468E;
+}
+.modal .modal-dialog .modal-content .modal-body .row div p{
+  font-size: 18px;
+  margin-top: 30px;
+  margin-left: 10pt;
+}
+.inline-block{
+  display: inline-block !important;
+}
+.modal .row input{
+  font-size: 22px;
+  font-weight: lighter;
+  background-color: #e6e6e6;
+  border: 0;
+  width: 100%;
+  margin-left: 10pt;
+  padding: 5pt 15pt;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+.input-narracion{
+  font-size: 22px;
+  font-weight: lighter;
+  background-color: #e6e6e6;
+  border: 0;
+  width: 100%;
+  margin-left: 20pt;
+  padding: 5pt 15pt;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+.fieldshidding{
+  display: none;
+}
+.enablesend,.enablefields{
+  height: 20pt;
+}
+.btn-sendFormSiniestro{
+  display: none;
+}
+.btn-sendFormSiniestro, .btn-sendFormSiniestro.focus, .btn-sendFormSiniestro:focus, .btn-sendFormSiniestro:hover{
+  color: #fff;
+  background-color:#cc7518;
+}
+.btn-sendFormVerde, .btn-sendFormVerde.focus, .btn-sendFormVerde:focus, .btn-sendFormVerde:hover{
+  color: #fff;
+  background-color:#709e32;
+}
+
+/*.open-section{
+  position: absolute;
+  bottom: ;
+}*/
+/*END POLIZA*/
+/*MORE INFO*/
+.moreinfo-container{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-top: 40pt;
+  padding-bottom: 30pt;
+}
+.right-info{
+  padding-left: 50pt;
+}
+.right-info h2, .left-info h2{
+  font-size: 30px;
+  font-weight: bold;
+  color: #00468E;
+  margin-top: 20pt;
+  margin-bottom: 30pt;
+  padding-top: 40pt;
+}
+.right-info p{
+  font-size: 17px;
+  width: 300pt;
+  font-weight: lighter;
+}
+.macotero{
+  width: 100pt !important;
+}
+.inner-row h2, .inner-row img{
+  display: inline-block;
+}
+.moreinfo-container .inner-row img{
+  margin-bottom: 5pt;
+  margin-left: 5pt;
+}
+.left-info{
+  padding-right: 50pt;
+}
+.left-info p{
+  font-size: 17px;
+  font-weight: lighter;
+}
+.novedades-btn{
+  margin-top: 20px;
+  height: 25pt;
+  width: 80pt;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: lighter;
+  background-color: #00468E;
+  color: #fff;
+  border: 0;
+}
+.poliza-payopt img{
+}
+/*.webpagos, .bancard{
+  width: 100%;
+  height: 50pt;
+}*/
+.sucursales .container{
+  margin-top: 30pt;
+  padding: 0;
+}
+.sucursales .col-xs-6{
+  padding: 0;
+}
+.sucursales .bold{
+  font-size: 32px;
+}
+.sucursales h2{
+  font-size: 26px;
+}
+.sucursales p{
+  font-size: 15px;
+}
+.agencias .somos-container-long{
+  min-height: 2000pt;
+}
+#page-siniestros  .somos-container-long{
+  height: 650pt;
+}
+.agencias-map{
+  height: 400pt;
+  margin-bottom: 50pt;
+}
+.map-container{
+  height: 300pt;
+  margin-bottom: 20pt;
+}
+#map-canvas{
+  height: 100%;
+  width: 100%;
+}
+.contacto p{
+  margin-top: 30pt;
+  margin-bottom: 30pt;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.contacto .container{
+  height: 300pt;
+}
+#page-contacto .somos-container-long{
+  height: 1000pt;
+}
+.contacto-list{
+  padding-top: 600pt;
+}
+.contacto-list li{
+  color: #00468E;
+  font-size: 25px;
+}
+.contacto-list p{
+  margin-top:0;
+  margin-bottom: 10px;
+}
+ul     	     {
+  margin: 0.75em 0;
+ padding: 0 1em;
+ list-style: none;
+	     }
+
+ul li:before {
+  content: "";
+    border-color: transparent #00468E;
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 0.9em;
+    position: relative;
+	     }
+/*END MORE INFO*/
+/*POLIZAS*/
+#page-polizas .somos-container-long{
+  height: 130pt;
+}
+#particular,#familiar,#empresa{
+  width: 100%;
+}
+#particular{
+  background-color: #E5F4FA;
+  /*min-height: 600pt;*/
+}
+#familiar{
+  background-color: #fff;
+  /*min-height: 500pt;*/
+}
+#empresa{
+  background-color: #f2f2f2;
+  /*min-height: 800pt;*/
+}
+.inner-pol{
+  width: 100%;
+  height: 80%;
+  padding: 30pt;
+  display: inline-block;
+}
+.inner-pol-title{
+  padding-left: 30pt;
+  padding-right: 30pt;
+  padding-top: 10pt;
+  margin-bottom: 30pt;
+  height: 20%;
+}
+.inner-pol-title p{
+  width: 170pt;
+  padding: 10pt;
+  margin-left: 10pt;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  display: inline-block;
+}
+#particular .inner-pol-title p{
+  background-color: #6AB2E2;
+}
+#familiar .inner-pol-title p{
+  background-color: #EEB861;
+}
+#empresa .inner-pol-title p{
+  background-color: #D7575B;
+}
+.inner-pol-title button{
+  display: inline-block;
+  background-color: #8CC63F;
+  color: #fff;
+  border: 0;
+  font-size: 20px;
+  border-radius: 10px;
+  padding-top: 3pt;
+  padding-bottom: 3pt;
+  padding-left: 7pt;
+  padding-right: 7pt;
+  margin-left: 10pt;
+}
+.pol-card{
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 10pt;
+  box-shadow: 2px 2px 11px 0px rgba(0,0,0,0.5);
+}
+.pol-card-title{
+  padding: 7pt;
+  color: #fff;
+   text-transform:uppercase;
+}
+.pol-card-title h2{
+     font-weight: lighter;
+     font-size: 25px;
+}
+#particular .pol-card-title{
+  background-color: #6AB2E2;
+}
+#familiar .pol-card-title{
+  background-color: #EEB861;
+}
+#empresa .pol-card-title{
+  background-color: #D7575B;
+}
+.pol-card-text{
+  padding: 10pt;
+  font-size: 16px;
+  font-weight: lighter;
+}
+.polizas p{
+  margin-top: 10pt;
+  font-size: 16px;
+}
+.poliza-formulario .formtxt{
+  margin-top: 15pt;
+  color: #00468E;
+  font-size: 16px;
+}
+.poliza-formulario{
+  padding-left: 0;
+  margin-left: 50pt;
+  padding-bottom: 50pt;
+  margin-top: -100pt;
+}
+/*END POLIZAS*/
+/*FOOTER*/
+.footer-container{
+  position: relative;
+  background-color: #00468E;
+  height: 200pt;
+}
+.footer-content .left-panel{
+    padding: 5% 3% 3% 5%;
+}
+.inner-row-footer img{
+  width: 20pt;
+  height: 20pt;
+}
+.inner-row-footer .footer-address, .inner-row-footer .footer-number, .inner-row-footer .footer-email{
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-left: 5pt;
+  padding-top: 2pt;
+  padding-bottom: 2pt;
+}
+.copyright{
+  color: #fff;
+  font-size: 12px;
+  font-weight: lighter;
+  margin-top: 5pt;
+}
+.footer-menu{
+  height: 100pt;
+  margin-top: 90pt;
+  margin-left: 30pt;
+}
+.footer-menu p{
+  color: #fff;
+  font-size: 14px;
+  font-weight: lighter;
+}
+.seguinos-container{
+  position: absolute;
+  right: 45pt;
+  bottom:41pt;
+
+}
+.seguinos-container p{
+  color: #fff;
+  font-size: 16px;
+  display: inline-block;
+}
+.seguinos-container img{
+  display: inline-block;
+  width: 15pt;
+  height: 15pt;
+  margin-bottom: 3pt;
+}
+.fb-icon{
+  margin-left: 10pt;
+  margin-right: 2pt;
+}
+.insta-icon{
+  margin-left: 2pt;
+  margin-right: 20pt;
+}
+/*END FOOTER*/
+/*grua service*/
+.grua-circle{
+  width: 127pt;
+  height: 127pt;
+  border-radius: 80px;
+  border: 3px solid red;
+  background-color: #fff;
+  position: fixed;
+  right: 20pt;
+  top:30%;
+  z-index: 1000;
+  overflow: hidden;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.grua-circle:hover{
+  opacity: 1;
+}
+.grua-img{
+  width: 100%;
+  height: 50pt;
+  background-image: url('../img/icon/tow-truck.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px 50px;
+}
+.grua-text{
+  width: 100%;
+  height: 70%;
+}
+.grua-text p{
+  font-size: 13px;
+  font-weight: bold;
+  color: #00468E;
+  margin: 0;
+}
+.grua-text p:last-child{
+  font-size: 18px;
+}
+/*end grua service*/
+/*responsive*/
+@media screen and (max-width: 1210px) {
+  .coberturas-title{
+    /*margin-left: 25%;*/
+  }
+  .card-img{
+    margin-left: 2%;
+    margin-left: 20%;
+    margin-top: 20%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .card-text p{
+    font-size: 16px;
+    margin-left: 0 ;
+  }
+  .cobertura-btn{
+    margin-left: 0;
+  }
+  .card-img{
+    width: 120pt;
+    height: 120pt;
+    margin-left: 10%;
+    margin-top: 30%;
+  }
+  .somos-img{
+    opacity: 0.1;
+  }
+  .seguinos-container{
+    bottom: 10pt;
+  }
+}
+@media screen and (max-width: 991px) {
+  .moreinfo-container .right-info, .left-info{
+    padding-left: 20%;
+    padding-right: 0;
+  }
+  .moreinfo-container .left-info p{
+    width: 400pt;
+  }
+  #particular, #familiar, #empresa{
+    text-align: center;
+    position: relative;
+  }
+  #page-polizas .somos-container-long{
+    display: inline-block;
+    text-align: center;
+  }
+  #page-polizas .somos-container-long .somos-text{
+    position: relative;
+    margin-left: 0;
+    float:none;
+  }
+  #page-polizas .somos-container-long .text-2{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+  }
+  .inner-pol .pol-card{
+    width: 50%;
+    margin-left: 25%;
+  }
+  .poliza-formulario{
+    padding-left: 15px;
+    margin-left: auto;
+    text-align: center;
+  }
+  .agencias .somos-container-long{
+    min-height: 1700pt;
+  }
+}
+@media screen and (max-width: 900px) {
+
+  .card-text p{
+    font-size: 14px;
+  }
+  .card-img{
+    width: 90pt;
+    height: 90pt;
+    margin-left: 10%;
+    margin-top: 30%;
+  }
+}
+@media screen and (max-width: 880px) {
+  .somos-text .text-2{
+    width: 80%;
+  }
+  .somos-text-2{
+    width: 90%;
+  }
+  .somos-text-2 .text-2{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 850px) {
+  #page-contacto .somos-container-long .somos-text{
+    float: none;
+    position: relative;
+    margin-left: 0;
+  }
+}
+/*TABLETS*/
+@media screen and (max-width: 768px) {
+  .grua-circle{
+    top: auto;
+    bottom: 35pt;
+    right: 5pt;
+    width: 70pt;
+    height: 70pt;
+    border-radius: 50%;
+  }
+  .displaynonegrua{
+    display: none;
+  }
+  .grua-img{
+    width: 100%;
+    height: 30px;
+  }
+  .desktop-menu{
+    display: none;
+  }
+  .navTrigger{
+    display: block;
+  }
+  .mobile-menu-btn{
+    display: block;
+  }
+  .mobile-logo-toolbar{
+    display: block;
+  }
+  .logo-toolbar{
+    width: 70pt;
+    height: 100%;
+    margin-top: 0;
+  }
+  .somos-content{
+    margin-left: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .somos-title-home{
+    width: 50%;
+  }
+  .somos-text-home{
+    width: 90%;
+  }
+  .somos-img{
+    opacity: 1;
+    background-image: url('../img/logo/logo-azul-home-comercio.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 200pt;
+    height: 60pt;
+    position: absolute;
+    right: 10%;
+    top: 50pt;
+  }
+  .line-arrow.left{
+    left: 5pt;
+  }
+  .line-arrow.right{
+    right: 5pt;
+  }
+  .footer-menu{
+    display: none;
+  }
+  .footer-content .col-xs-6{
+    width: 70%;
+  }
+  .seguinos-container{
+    bottom: 60pt;
+  }
+  .inner-row-footer .footer-email{
+    font-size: 14px;
+  }
+  .nosotros-container{
+    min-height: 950pt;
+  }
+  .nosotros-container .somos-text h2{
+    font-size: 24px;
+    width: 50%;
+  }
+  .nosotros-container .somos-text .text-2{
+    width: 80%;
+  }
+  .nosotros-container .somos-img{
+    position: absolute;
+    margin-top: 0;
+    margin-right: 0;
+    background-size: contain;
+    width: 180pt;
+    top: 30pt;
+    right: 50pt;
+  }
+  .nosotros-container .somos-text-2{
+    width: 80%;
+  }
+  .nosotros-container .somos-text-2 .text-2{
+    width: 80%;
+  }
+  .poliza-container-2{
+    padding-top: 50pt;
+  }
+  #page-siniestros .somos-container-long .somos-text{
+    float: none;
+    position: relative;
+    margin-left: 0;
+  }
+  #page-siniestros .somos-container-long .somos-text h2{
+    text-align: center;
+  }
+  #page-siniestros .somos-container-long .somos-text .lighter{
+    text-align:left;
+    margin-left: 10%;
+    width: 400pt;
+  }
+  #page-siniestros .somos-container-long .somos-text .text-2{
+    width: 400pt;
+    margin-left: 10%;
+  }
+  #page-siniestros .somos-img{
+    display: none;
+  }
+  #page-siniestros .somos-container-2{
+    position: relative;
+    min-height: 400pt;
+  }
+  #page-siniestros .somos-container-2 .somos-text-2{
+    position: relative;
+    margin-left: 10%;
+    width: 80%;
+  }
+  #page-siniestros .somos-container-2 .somos-text-2 h2{
+    text-align: center;
+    width: 50%;
+    margin-left: 20%;
+  }
+  #page-siniestros .somos-container-2 .somos-text-2 .text-2{
+    width: 100%;
+  }
+  #page-agencias .somos-container-long .somos-text{
+    float: none;
+    position: relative;
+  }
+  .sucursales{
+    width: 70%;
+    margin-left: 25%;
+  }
+  .sucursales .container{
+    width: 80%;
+    margin-left: 0;
+  }
+  .agencias-map{
+    position: relative;
+    margin-bottom: 300pt;
+  }
+  #page-contacto .somos-container-long{
+    height: 1200pt;
+  }
+  .contacto{
+    float: none;
+    position: relative;
+    margin-left: 0;
+  }
+  .contacto .text-2{
+    width: 100%;
+  }
+  .contacto-list{
+    display: inline-block;
+    padding-top: 0;
+  }
+
+}
+
+@media screen and (max-width: 670px) {
+  .somos-container{
+    height: 400pt;
+  }
+  .moreinfo-container .left-info p{
+    width: 300pt;
+  }
+  .coberturas-carousel-container .col-xs-1{
+    display: none;
+  }
+  .coberturas-carousel-container .col-xs-10{
+    width: 100%;
+  }
+  .nosotros-container{
+    min-height: 900pt;
+  }
+  .nosotros-valores{
+    height: 700pt;
+  }
+}
+
+/*mobile*/
+@media screen and (max-width: 600px) {
+  .item-child {
+    width: 100%;
+    bottom: 0;
+  }
+  .item-child p{
+    font-size: 45px;
+    line-height: 40pt;
+    margin: auto;
+  }
+  .somos-img{
+    width: 150pt;
+  }
+  .card-content{
+    width: 98%;
+    margin-left: 3pt;
+  }
+  .card-text p{
+    margin-right: 0;
+  }
+  .moreinfo-container .right-info, .left-info{
+    padding-left: 10%;
+    padding-right: 0;
+  }
+  .somos-text-2{
+    margin-left: 20pt;
+  }
+  .nosotros-container{
+    min-height: 1100pt;
+  }
+  .nosotros-valores{
+    height: 1000pt;
+  }
+  .nosotros-container .somos-img{
+    width: 150pt;
+  }
+  .nosotros-container .somos-text{
+    margin-left: 20pt;
+  }
+  #page-siniestros .somos-container-long{
+    height: 800pt;
+  }
+  #page-siniestros .somos-container-long .somos-text .lighter,#page-siniestros .somos-container-long .somos-text .text-2{
+    text-align:left;
+    margin-left: 5%;
+    width: 280pt;
+  }
+  .poliza-container-2{
+    padding-top: 0;
+  }
+  .poliza-container-2 .col-md-5{
+    padding-top: 60pt;
+  }
+  .inner-pol .pol-card{
+    width: 80%;
+    margin-left: 12%;
+  }
+  #page-siniestros .somos-container-2{
+    display: block;
+  }
+  #page-siniestros .somos-container-2 .somos-text-2 h2{
+    margin-left: 0;
+    width: 100%;
+  }
+  .siniestros-respaldo{
+    width: 100%;
+  }
+  .siniestros-respaldo img{
+    width: 100%;
+  }
+  .agencias-map{
+    margin-bottom: 150pt;
+  }
+  .seguinos-container{
+    right: 20pt;
+    top: 18pt;
+  }
+  .modal-header h2{
+    font-size: 30px;
+  }
+  .modal .modal-dialog .modal-content .modal-body .row div p{
+    font-size: 15px;
+  }
+  .modal-body h3{
+    font-size: 20px;
+  }
+  .modal .row input{
+    font-size: 17px;
+  }
+  .margin-top-forstucktitle{
+    margin-top: 50pt;
+  }
+  .sucursales .bold{
+    font-size: 26px;
+  }
+  .somos-text .lighter{
+    font-size: 23px;
+  }
+  .contacto-list li{
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .item-child p{
+    font-size: 35px;
+    line-height: 30pt;
+    margin-top: 5pt;
+    margin-left: 10pt;
+  }
+  .nosotros-container .somos-img{
+    width: 120pt;
+    top: 50pt;
+    right: 5%;
+  }
+  .somos-container{
+    height: 450pt;
+  }
+  .coberturas-title h2{
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .toolbar{
+    height: 70pt;
+  }
+  .somos-content{
+    margin-left: 5%;
+  }
+  .somos-img{
+    width: 120pt;
+    right: 5%;
+  }
+  .coberturas-carousel-container{
+    padding-top: 50pt;
+  }
+  .coberturas-title h2{
+    font-size: 20px;
+  }
+  .card-img{
+    margin-left: 2%;
+    width: 70pt;
+    height: 70pt;
+    margin-top: 70%;
+  }
+  .poliza-payopt img{
+    /*width: 80%;*/
+  }
+
+  
+  h2{
+    font-size:  27px;
+  }
+  .poliza-container .phone-call{
+    width: 40pt;
+    height: 40pt;
+  }
+  .moreinfo-container .right-info, .moreinfo-container .left-info{
+    padding-left: 15px;
+  }
+  .moreinfo-container .left-info p{
+    width: 240pt;
+  }
+  .card-text p{
+    font-size: 13px;
+  }
+  #page-polizas .somos-container-long{
+    height: 100pt;
+  }
+  .inner-pol-title p, .inner-pol-title button{
+    margin-left: 0;
+  }
+  .inner-pol .pol-card{
+    width: 90%;
+    margin-left: 5%;
+  }
+  .polizas h2{
+    margin-left: 0;
+    font-size: 22px;
+  }
+  .nosotros-container{
+    min-height: 1100pt;
+  }
+  .full-width-img{
+    height: 120pt;
+  }
+  .nosotros-valores{
+    height: 1000pt;
+  }
+  .sucursales{
+    margin-left: 20%;
+  }
+  .sucursales .col-xs-12{
+    padding-left: 0;
+  }
+  .footer-container{
+    padding: 0;
+  }
+  .footer-content{
+    padding: 0;
+  }
+  .footer-content .col-xs-6{
+    width: 100%;
+  }
+  .little-btn{
+    font-size: 20px;
+  }
+  .agencias-map{
+    margin-bottom: 300pt;
+  }
+}
+@media screen and (max-width: 405px) {
+  #page-contacto .somos-container-long{
+    height: 1400pt;
+  }
+  .contacto-list{
+    padding: 0;
+  }
+  #page-siniestros .somos-container-long{
+    height: auto;
+  }
+  #page-siniestros .somos-container-long .somos-text .lighter,#page-siniestros .somos-container-long .somos-text .text-2{
+    width: 250pt;
+  }
+  .item-child{
+    top: 40%;
+  }
+  .nosotros-container{
+    height: 1200pt;
+  }
+  .agencias-map{
+    margin-bottom: 400pt;
+  }
+}
+@media screen and (max-width: 375px) {
+  .nosotros-container .somos-text .text-2{
+    width: 90%;
+  }
+  .nosotros-container{
+    min-height: 1250pt;
+  }
+  .nosotros-valores{
+    height: 1000pt;
+  }
+  .footer-content{
+    padding-top: 30pt;
+  }
+  .seguinos-container{
+    right: 140px;
+  }
+
+  h2{
+    font-size: 23px;
+  }
+  .somos-img{
+    width: 100pt;
+  }
+  .coberturas-title h2{
+    font-size: 18px;
+  }
+  .card-title{
+    font-size: 20px;
+  }
+  #coberturas-carousel .item .coberturas-card{
+    margin: 0;
+  }
+  .card-img{
+    margin-left: -5px;
+  }
+  .card-text p{
+    margin-top: 5px;
+  }
+  .poliza-container h2{
+    font-size: 25px;
+  }
+  .poliza-container h1{
+    font-size: 40px;
+  }
+  .poliza-container .phone-call{
+    width: 30pt;
+    height: 30pt;
+  }
+  .poliza-btn{
+    font-size: 18px;
+  }
+  .moreinfo-container{
+    padding-top: 0;
+  }
+  .moreinfo-container .right-info,.moreinfo-container .left-info{
+    padding-left: 10px;
+  }
+  .right-info h2, .left-info h2{
+    font-size: 23px;
+  }
+  .inner-row img{
+    width: 40px;
+    height: 40px;
+  }
+  .moreinfo-container .left-info p{
+    width: 210pt;
+  }
+  .item-child{
+    top: 50%;
+  }
+  .item-child p{
+    font-size: 3rem;
+  }
+  .item .container{
+    padding: 0;
+  }
+  .nosotros-container .somos-img{
+    width: 90pt;
+    top: 40pt;
+    right: 2%;
+  }
+  .inner-pol .pol-card{
+    width: 100%;
+    margin-left: 2%;
+  }
+  .pol-card-title h2{
+    font-size: 20px;
+  }
+  .polizas h2{
+    font-size: 23px;
+  }
+  .somos-text .lighter{
+    font-size: 23px;
+  }
+  #page-siniestros .somos-container-long .somos-text .lighter,#page-siniestros .somos-container-long .somos-text  .text-2{
+    width: 220pt;
+  }
+  #page-siniestros .somos-container-long{
+    height: 900pt;
+  }
+  .somos-container-long .contacto-list{
+    padding: 0;
+  }
+  .contacto-list li{
+    font-size: 18px;
+  }
+  .contacto-list p{
+    font-size: 12px;
+  }
+  #page-contacto .somos-container-long{
+    height: 1200pt;
+  }
+  .margin-top-5px{
+    margin-top: 4%;
+  }
+  .margin-top-10px{
+    margin-top: 10%;
+  }
+  .margin-top-15px{
+    margin-top: 30px;
+  }
+  .margin-top-forstucktitle{
+    margin-top: 100pt;
+  }
+}
+@media screen and (max-width: 320px) {
+  .item-child{
+    top: 40%;
+  }
+  .nosotros-container{
+    min-height: 1300pt;
+  }
+  .nosotros-valores{
+    height: 1000pt;
+  }
+  ul{
+    padding: 0;
+  }
+  .seguinos-container{
+    right: 120px;
+  }
+  .little-btn{
+    font-size: 16px;
+  }
+
+}
+.glyphicon {
+  right: 10px;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: inherit;
+  font-weight: 800;
+}

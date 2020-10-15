@@ -1,0 +1,129 @@
+<?php
+
+/**
+ * El Comercio Paraguayo, W3 S.A. - IT Solutions. All Rights Reserved. 2011.
+ *
+ * @author Jose Avalos   -  29-may-2013, 16:23:52.
+ * 
+ * $Id$
+ */
+?>
+        <?php
+
+        require("include/class.phpmailer.php");
+
+        $mail = new PHPMailer();
+
+        $mail->IsSMTP(); // enable SMTP
+        $mail->SMTPDebug = 0;  // debugging: 1 = errors and messages, 2 = messages only
+//SMTP AUTHENTICATION
+        $mail->SMTPAuth = true;  // authentication enabled
+        $mail->Host = 'mail.w3.com.py';
+        $mail->Port = 587;
+        $mail->Username = "smtp@w3.com.py";
+        $mail->Password = "$%asdf2357r#";
+
+//FROM
+        $mail->From = "smtp@w3.com.py";
+        $mail->FromName = "Web El Comercio Paraguayo";
+
+//TO
+//$mail->AddAddress("elcomercioparaguayo@elcomercioparaguayo.com.py");
+          $mail->AddAddress("jose.avalos@w3.com.py");
+//        $mail->AddAddress("siniestros@elcomercioparaguayo.com.py");
+//        $mail->AddAddress("siniestrosauto@elcomercioparaguayo.com.py");
+//        $mail->AddAddress("elcomercioparaguayo@elcomercioparaguayo.com.py");
+//$mail->AddAddress("endrigo.rivas@w3.com.py"); 
+
+        $mail->WordWrap = 50;
+        $mail->IsHTML(true);
+        $mail->CharSet = "ISO-8859-1";
+
+        $browser = get_browser(null, true);
+
+        $mail->Subject = "Solicitud de Seguro - El Comercio Paraguayo Web";
+        $fecha = date("d.m.Y, g:i a");
+        $mensaje = "
+		<span style='font-family:Verdana, Geneva, sans-serif'>
+		<p><strong><span style='font-size:16px'>El Comercio Paraguayo Web - DSolicitud de Seguro </span></strong><br>
+				<strong>Ingresado el </strong>" . $fecha . ".
+				<br>
+		  <strong>DATOS PERSONALES</strong>
+                        <br> 
+                        <br>
+		  <strong>Nombre Completo = </strong>" . $_POST['nombre'] . "  
+                      <br>
+		  <strong>Cédula de Identidad = </strong>" . $_POST['cedula'] . " 
+                      <br>
+		  <strong>Fecha de Nacimiento = </strong>" . $_POST['fecha_nacimiento'] . " 
+                      <br>
+		  <strong>Dirección Particular = </strong>" . $_POST['direccion_particular'] . " 
+                      <br>
+		  <strong>Ciudad = </strong>" . $_POST['ciudad'] . " 
+                      <br>
+		  <strong>Teléfono Fijo = </strong>" . $_POST['telefono'] . " 
+                      <br>
+		  <strong>Celular = </strong>" . $_POST['celular'] . " 
+                      <br>
+		  <strong>E-mail = </strong>" . $_POST['email'] . " 
+                      <br>
+                  <strong>DATOS DEL VEHICULO</strong>
+                        <br>
+                        <br>
+                   <strong>Clase de Vehículo = </strong>" . $_POST['clase'] . "
+                       <br>
+                   <strong>Tipo = </strong>" . $_POST['tipo'] . "
+                       <br>
+                   <strong>Marca = </strong>" . $_POST['marca'] . "
+                       <br>
+                   <strong>Destinado a = </strong>" . $_POST['destinado'] . "
+                       <br>
+                   <strong>Color: = </strong>" . $_POST['color'] . "
+                       <br>
+                   <strong>Modelo (año) = </strong>" . $_POST['modelo'] . "
+                       <br>
+                   <strong>Motor Nº = </strong>" . $_POST['motor'] . "
+                       <br>
+                   <strong>Tonelada(s) = </strong>" . $_POST['tonelada'] . "
+                       <br>
+                   <strong>Chasis Nº = </strong>" . $_POST['chasis'] . "
+                       <br>
+                   <strong> Chapa Municipal = </strong>" . $_POST['chapa'] . "
+                       <br>
+                   <strong>Localidad = </strong>" . $_POST['localidad'] . "
+                       <br>
+                   <strong>Localidad = </strong>" . $_POST['localidad'] . "
+                       <br>
+                   <strong>Suma a asegurarse (Gs) = </strong>" . $_POST['suma'] . "
+                       <br>
+                   <strong>Valor Comercial del Vehículo (Gs) = </strong>" . $_POST['valor_comercial'] . "
+                       <br>
+                   <strong> Vigencia = </strong>" . $_POST['Vigencia'] . "
+                       <br>
+                   <strong> Desde = </strong>" . $_POST['desde'] . "
+                       <br>
+                   <strong> Hasta = </strong>" . $_POST['hasta'] . "
+                       <br>
+		  <strong>INFORMACION EXTRA</strong></p>
+		<p><strong>Navegador Web = </strong>" . $_SERVER['HTTP_USER_AGENT'] . " <br>
+		  <strong>IP = </strong>" . $_SERVER['REMOTE_ADDR'] . " <br>
+		  <strong>HOST = </strong>" . $_SERVER['REMOTE_HOST'] . " <br>
+		</p>
+		</span>
+		";
+
+        $mail->Body = $mensaje;
+        $mail->AltBody = "El Comercio Paraguayo - Solicitud de Seguro";
+
+        $denuncia = 1;
+        if (!$mail->Send()) {
+            $denuncia = 0;
+            echo '<script type="text/javascript">alert("Su Solicitud no ha podido ser enviada - El Comercio Paraguayo");</script>';
+        }
+
+        if ($denuncia == 1) {
+            echo '<script type="text/javascript">alert("Su Solicitud ha sido enviada - El Comercio Paraguayo");</script>';
+        }
+
+        echo '<META HTTP-EQUIV="Refresh" CONTENT="0; URL=http://www.elcomercioparaguayo.com.py">';
+        ?>
